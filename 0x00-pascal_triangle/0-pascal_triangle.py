@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Implementing a fuction that produces the pascal's triangle"""
 
 def pascal_triangle(n):
     """Create the pascal's triangle"""
