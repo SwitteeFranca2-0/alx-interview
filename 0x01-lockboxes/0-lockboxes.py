@@ -9,7 +9,6 @@ def canUnlockAll(boxes):
     for i, box in enumerate(boxes, start=0):
         if i in keys:
             key_clone.extend(box)
-            print(key_clone)
         else:
             j = len(boxes) - 1
             while (j > 0):
@@ -22,5 +21,4 @@ def canUnlockAll(boxes):
                             break
                 j -= 1
         keys = key_clone
-        print(keys)
     return True
