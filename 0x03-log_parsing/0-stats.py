@@ -11,7 +11,7 @@ i = 0
 
 
 def print_file(dic, file_size):
-    print("File Size: {}".format(file_size))
+    print("File size: {}".format(file_size))
     stat_code = dict(sorted(dic.items()))
     for c, i in stat_code.items():
         if i != 0:
