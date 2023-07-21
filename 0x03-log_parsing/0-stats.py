@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 """get status reports"""
 
 import sys
@@ -13,7 +13,7 @@ try:
         file_size += int(line.split()[-1])
         code = line.split()[-2]
         if code not in status_code.keys():
-            status_code[code] = 1 
+            status_code[code] = 1
         else:
             status_code[code] += 1
         if i == 10:
@@ -28,4 +28,3 @@ except KeyboardInterrupt as e:
     for c, i in stat_code.items():
         print("{}: {}".format(c, i))
     raise e
-    
