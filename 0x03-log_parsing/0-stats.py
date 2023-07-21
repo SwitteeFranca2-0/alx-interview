@@ -12,8 +12,7 @@ i = 0
 
 def print_file(dic, file_size):
     print("File size: {}".format(file_size))
-    stat_code = dict(sorted(dic.items()))
-    for c, i in stat_code.items():
+    for c, i in status_code.items():
         if i != 0:
             print("{}: {}".format(c, i))
 
@@ -29,6 +28,7 @@ if __name__ == "__main__":
             if i == 10:
                 print_file(status_code, file_size)
                 i = 0
+            print_file(status_code, file_size)
     except KeyboardInterrupt as e:
         print_file(status_code, file_size)
         raise
