@@ -1,4 +1,6 @@
-#!/usr/bin/python3 
+#!/usr/bin/python3
+"""This code is o determmine the perimeter of an island"""
+
 
 def island_perimeter(grid):
     """This function finds the area of the island perimeter"""
@@ -14,5 +16,3 @@ def island_perimeter(grid):
             if row.count(1) > breadth:
                 breadth = row.count(1)
     return 2*(length + breadth)
-    
-
