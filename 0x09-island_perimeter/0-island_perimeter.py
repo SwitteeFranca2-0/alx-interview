@@ -3,16 +3,20 @@
 
 
 def island_perimeter(grid):
-    """This function finds the area of the island perimeter"""
+    """island perimeter funvtoin"""
     height = len(grid)
     width = len(grid[0])
-    length = 0
-    breadth = 0
-    for row in grid:
-        if 1 not in row and length != 0:
-            break
-        if 1 in row:
-            length += 1
-            if row.count(1) > breadth:
-                breadth = row.count(1)
-    return 2*(length + breadth)
+    perimeter = 0
+
+    for row in range(height):
+        for col in range(width):
+            if grid[row][col] == 1:  # If it's land
+                perimeter += 4  # Each land cell contributes 4 to perimeter
+
+                # Check adjacent cells
+                if row > 0 and grid[row - 1][col] == 1:
+                    perimeter -= 2  # Subtract 2 if there's land above
+                if col > 0 and grid[row][col - 1] == 1:
+                    perimeter -= 2  # Subtract 2 if there's land to the left
+
+    return perimeter
